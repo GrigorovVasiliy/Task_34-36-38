@@ -8,10 +8,9 @@ for (int i = 0; i < array.Length; i++)
 
 int sum = 0;
 
-for (int i = 0; i < array.Length; i++)
-    {
-    if (array[i] % (-2) != 0 && array[i] % 2 != 0)
-        sum+=array[i];
-    }
+for (int i = 1; i < array.Length; i = i + 2)
+
+    sum += array[i];
+
 Console.WriteLine($"Случайный массив из трухзначных чисел:\n[{string.Join(", ", array)}]");
-Console.WriteLine($"Сумма нечетных чисел: {sum}");
+Console.WriteLine($"Сумма элементов, стоящих на нечётных позициях.: {sum}");
